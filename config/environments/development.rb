@@ -1,3 +1,5 @@
+require 'active_support/time'
+
 DalliSessionTest::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -34,4 +36,11 @@ DalliSessionTest::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+ config.cache_store = :dalli_store, nil, {:namespace => 'dalli-session-test',
+                                          :expires_in  => 5.seconds,
+                                          :compress => true,
+                                          :pool_size => 20,
+                                          :logger => Rails.logger }
+
 end

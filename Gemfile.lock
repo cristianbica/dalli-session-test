@@ -37,6 +37,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    connection_pool (2.0.0)
     dalli (2.7.2)
     erubis (2.7.0)
     execjs (2.2.0)
@@ -104,6 +105,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  connection_pool
   dalli
   jquery-rails
   rails (= 3.2.18)
